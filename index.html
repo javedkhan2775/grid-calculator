@@ -23,6 +23,16 @@
                         <input type="number" id="kv" class="form-control" min="1" max="1000" />
                     </div>
 
+                     <div class="text-center">
+                        <button class="btn btn-primary btn-lg" onclick="calculate()">Calculate</button>
+                    </div>
+
+                    <div class="result-box text-center mb-3">
+                        Final Price: <span id="finalPrice">0</span>
+                    </div>
+
+                    <h3 class="text-center mb-4">Solar Estimate Division</h3>
+
                     <div class="mb-3">
                         <label class="form-label">2. Net Meter Price</label>
                         <input type="text" id="netMeter" class="form-control" readonly />
@@ -48,13 +58,6 @@
                         <input type="text" id="solarPanel" class="form-control" readonly />
                     </div>
 
-                    <div class="result-box text-center mb-3">
-                        Final Price: <span id="finalPrice">0</span>
-                    </div>
-
-                    <div class="text-center">
-                        <button class="btn btn-primary btn-lg" onclick="calculate()">Calculate</button>
-                    </div>
                 </div>
             </div>
         </div>
