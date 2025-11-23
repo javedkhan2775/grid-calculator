@@ -56,8 +56,11 @@
                     <div class="mb-3">
                         <label class="form-label">6. Solar Panel</label>
                         <input type="text" id="solarPanel" class="form-control" readonly />
-                        <input type="text" id="rate" class="form-control" readonly />
-                        <input type="text" id="quantity" class="form-control" readonly />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">7. Transport</label>
+                        <input type="text" id="transport" class="form-control" readonly />
                     </div>
 
                 </div>
@@ -90,13 +93,14 @@ function calculate() {
     // Field 7: Final Price
     let finalPrice = netMeter + labour + material + inverter + solarPanel;
 
+    let transport = kv * 1000;
+
     document.getElementById("netMeter").value = netMeter;
     document.getElementById("labour").value = labour;
     document.getElementById("material").value = material;
     document.getElementById("inverter").value = inverter;
     document.getElementById("solarPanel").value = solarPanel.toFixed(2);
-    document.getElementById("rate").value = rate.toFixed(2);
-    document.getElementById("quantity").value = quantity.toFixed(2);
+    document.getElementById("transport").value = transport.toFixed(2);
     document.getElementById("finalPrice").innerText = finalPrice.toFixed(2);
 }
 </script>
